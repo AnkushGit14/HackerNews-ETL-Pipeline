@@ -19,7 +19,7 @@
 
 ---
 
-## ðŸ—ï¸ Why Build an ETL Pipeline?
+## 🏗️ Why Build an ETL Pipeline?
 
 Most data analysts rely on pre-cleaned CSV files (like Kaggle datasets) to build analysis. However, real business data is often trapped on websites, APIs, or internal portals, filled with unstructured text and missing values.
 
@@ -27,7 +27,7 @@ This project demonstrates **Data Engineering fundamentals**: building an automat
 
 ---
 
-## âš™ï¸ Architecture & Data Flow
+## ⚙️ Architecture & Data Flow
 
 The script `scraper/etl_pipeline.py` executes three distinct phases automatically:
 
@@ -38,7 +38,7 @@ The script `scraper/etl_pipeline.py` executes three distinct phases automaticall
 
 ### 2. TRANSFORM (Pandas & Regex)
 - Converts raw extracted dictionaries into a Pandas DataFrame.
-- Uses **Regular Expressions (`re`)** to extract integers from dirty strings (e.g., converting `"150 points"` â†’ `150`).
+- Uses **Regular Expressions (`re`)** to extract integers from dirty strings (e.g., converting `"150 points"`  →  `150`).
 - Normalizes missing values and manages schema data types.
 - Generates execution timestamps (`scraped_at`) to track data freshness.
 
@@ -49,7 +49,7 @@ The script `scraper/etl_pipeline.py` executes three distinct phases automaticall
 
 ---
 
-## ðŸ“Š Analytical Insights
+## 📊 Analytical Insights
 
 Once the data resides in the Data Warehouse (SQLite), the `notebooks/generate_analytics.py` script queries the database to extract business insights.
 
@@ -75,7 +75,7 @@ Once the data resides in the Data Warehouse (SQLite), the `notebooks/generate_an
 
 ---
 
-## ðŸš€ How to Run the Pipeline
+## 🚀 How to Run the Pipeline
 
 You can run this pipeline yourself to scrape the absolute latest news and build your own database.
 
@@ -98,7 +98,7 @@ python generate_analytics.py
 
 ---
 
-## ðŸ—„ï¸ SQL Highlights
+## 🗃️ SQL Highlights
 
 The `sql/hn_analytics.sql` file contains analytical queries that can be run against the generated database:
 
@@ -116,14 +116,14 @@ ORDER BY points DESC;
 
 ---
 
-## ðŸ‘¨â€ðŸ’» Author
+## 👨‍💻 Author
 
-**Ankush Kumar Jaiswal** â€” NIT Raipur | Data Analyst
+**Ankush Kumar Jaiswal** - NIT Raipur | Data Analyst
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/ankush-jaiswal-nitrr/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat-square&logo=github)](https://github.com/AnkushGit14)
 
 ---
 
-## ðŸ“„ License
+## 📄 License
 This project is licensed under the MIT License.
