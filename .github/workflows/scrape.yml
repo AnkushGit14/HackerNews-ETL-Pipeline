@@ -35,8 +35,8 @@ jobs:
 
       - name: Commit and Push Database Update
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "thisisankushjaiswal@gmail.com"
+          git config --local user.name "Ankush Kumar Jaiswal"
           git add data/hacker_news.db
           # Only commit if the database actually changed
           git diff --quiet && git diff --staged --quiet || git commit -m "data: daily ETL database auto-update [skip ci]"
